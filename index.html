@@ -8,11 +8,12 @@
   <body class="flexCenter">
     <article class="flexStart" data-testid="test-profile-card">
       <div class="cover-pic">
-        <!-- <span id="milli"></span> -->
         <div id="time" data-testid="test-user-time">
-          <span id="hour"></span>:<span id="mins"></span>:<span
-            id="secs"
-          ></span>
+          <span class="text">current time in millisec</span>
+           <span id="milli"></span>
+           <!-- :<span id="hour"></span> -->
+          <!-- :<span id="mins"></span>
+          :<span id="secs"></span> -->
         </div>
       </div>
       <div class="image-container">
@@ -149,17 +150,16 @@
       </div>
     </article>
 
-    <script>
-      const time = () => {
-        const d = new Date();
-        const utc = d.toUTCString();
-        document.getElementById("hour").innerHTML = d.getUTCHours();
-        document.getElementById("mins").innerHTML = d.getUTCMinutes();
-        document.getElementById("secs").innerHTML = d.getUTCSeconds();
-        document.getElementById("milli").innerHTML = d.getUTCMilliseconds();
-      };
+<script>
+  const time = () => {
+    const d = new Date();
+    // document.getElementById("hour").innerHTML = d.getUTCHours();
+    // document.getElementById("mins").innerHTML = d.getUTCMinutes();
+    // document.getElementById("secs").innerHTML = d.getUTCSeconds();
+    document.getElementById("milli").innerHTML = Date.now();
+  };
 
-      setInterval(time, 1000);
-    </script>
+  setInterval(time, 1000);
+</script>
   </body>
 </html>
