@@ -2,8 +2,6 @@
 
 A simple and responsive profile card built using **HTML** and **CSS**.
 
-## 🖼️ Preview
-
 A minimal design showcasing a profile image, name, and brief description.
 
 ## 🛠️ Tech Stack
@@ -25,9 +23,6 @@ A minimal design showcasing a profile image, name, and brief description.
    cd profile-card
    ```
 
-   ```
-
-   ```
 
 3. Open the index.html file in your browser.
 
