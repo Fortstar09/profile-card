@@ -16,7 +16,7 @@ A minimal design showcasing a profile image, name, and brief description.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/profile-card.git
+   git clone https://github.com/Fortstar09/profile-card.git
    ```
 
 2. Open the project folder:
