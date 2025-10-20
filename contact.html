@@ -4,10 +4,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Contact Form</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+      .success {
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body class="flexStart">
     <main class="about">
-       <a href="/index.html" class="links">Back to home</a>
+      <a href="/index.html" rel="noopener noreferrer" class="links">Back to home</a>
+      <section>
+        <h2>Get in touch</h2>
+        <form id="contact-form">
+          <div>
+            <label for="name">Full name</label><br />
+            <input
+              id="name"
+              data-testid="test-contact-name"
+              aria-describedby="error-name"
+            /><br />
+            <span
+              id="error-name"
+              data-testid="test-contact-error-name"
+              class="error"
+            ></span>
+          </div>
+          <br />
+
+          <div>
+            <label for="email">Email</label><br />
+            <input
+              id="email"
+              data-testid="test-contact-email"
+              aria-describedby="error-email"
+            /><br />
+            <span
+              id="error-email"
+              data-testid="test-contact-error-email"
+              class="error"
+            ></span>
+          </div>
+          <br />
+
+          <div>
+            <label for="subject">Subject</label><br />
+            <input
+              id="subject"
+              data-testid="test-contact-subject"
+              aria-describedby="error-subject"
+            /><br />
+            <span
+              id="error-subject"
+              data-testid="test-contact-error-subject"
+              class="error"
+            ></span>
+          </div>
+          <br />
+
+          <div>
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              data-testid="test-contact-message"
+              aria-describedby="error-message"
+            ></textarea
+            ><br />
+            <span
+              id="error-message"
+              data-testid="test-contact-error-message"
+              class="error"
+            ></span>
+          </div>
+          <br />
+
+          <button type="submit" data-testid="test-contact-submit">
+            Submit
+          </button>
+          <div
+            id="success"
+            data-testid="test-contact-success"
+            class="success"
+            role="status"
+          ></div>
+        </form>
+      </section>
     </main>
+    <script src="validation.js"></script>
   </body>
 </html>
